@@ -1,0 +1,162 @@
+.container {
+    background-color: #0c3743;
+    width: 400px;
+    min-height: 500px;
+    /* Kích thước tối thiểu của container */
+    max-height: 500px;
+    /* Kích thước cố định của container */
+    overflow-y: auto;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scrollbar-color: transparent transparent;
+}
+
+.container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    /* Để có vị trí cố định */
+    top: 0;
+    /* Đặt ở trên cùng của màn hình */
+    left: 50%;
+    background-color: #0c3743;
+    /* Dịch chuyển 50% từ mép trái */
+    transform: translateX(-50%);
+    /* Để căn giữa theo chiều ngang */
+    z-index: 1000;
+    /* Đảm bảo lớp này nằm trên các phần tử khác */
+
+}
+
+.title {
+    text-align: center;
+    align-items: center;
+    color: white;
+}
+
+.taskInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputBox {
+    background-color: black;
+    color: #ffffff;
+    height: 100%;
+    width: 205px;
+    border-radius: 10px;
+    margin-right: 30px;
+    padding-left: 20px;
+}
+
+.taskListContainer {
+    margin-top: 160px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    /* Kích thước tối thiểu của container */
+    max-height: 300px;
+    /* Kích thước cố định của container */
+    overflow-y: auto;
+    scrollbar-color: transparent transparent;
+    position: relative;
+}
+
+.taskListContainer::-webkit-scrollbar {
+    width: 6px;
+}
+
+.taskListContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.taskList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+    max-height: 40px;
+    width: 300px;
+    border: 2px solid #6e8c97;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    float: left;
+}
+.editInput {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    margin-left: 20px;
+}
+
+.iconList {
+    margin-right: 20px;
+    display: flex;
+    font-weight: 700;
+}
+
+.task {
+    color: white;
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px ;
+    color: white;
+    margin-left: 20px;
+    text-decoration-color: #ff8376
+}
+
+.checkBox:hover {
+    background-color: #ff8376;
+}
+
+.editBox:hover {
+    background-color: #e0cb42;
+}
+
+.removeBox:hover {
+    background-color: #2da8ab;
+}
+
+.scrollIcon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
