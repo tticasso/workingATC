@@ -1,0 +1,22 @@
+@media (min-width: 1024px) and (max-width: 1919px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+   .brand-text {
+    font-size: 10px;
+   }
+
+   .brand {
+    margin-top: 3px;
+    margin-bottom: 3px;
+   }
+
+   .brand-items {
+    margin-top: 10px;
+   }
+}

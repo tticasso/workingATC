@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useState } from "react";
+import '../style/Brand.css'
 import Brand1 from '../assets/Brand 1.png'
 import Brand2 from '../assets/Brand 2.png'
 import Brand3 from '../assets/Brand 3.png'
@@ -15,7 +16,7 @@ export default function Brands() {
     return (
         <Container className="w-3/4">
             <Row>
-                <Col className="w-full flex justify-center mt-[35px]">
+                <Col className="w-full flex justify-center">
                     <div className="w-3/5">
                         <div className="w-full flex justify-center">
                             <div className="w-[80px] h-[80px]">
@@ -23,7 +24,7 @@ export default function Brands() {
                             </div>
                         </div>
 
-                        <p className="text-[18px] text-[#616161] text-center mt-[20px] mb-[20px]">
+                        <p className="text-[18px] text-[#616161] text-center mt-[20px] mb-[20px] brand-text">
                             “Good services. I bought a bicycle with a wrong but they accepted free return for me and exchange a new product for me.
                         </p>
                         <p className="text-[18px] text-center font-bold">
@@ -48,23 +49,23 @@ export default function Brands() {
                 </Col>
             </Row>
             <div className="w-full h-[1px] bg-gray-500 mt-4"></div>
-            <Row className="h-85px mt-[30px] mb-[30px]">
-                <Col className="h-full" xs={2}>
+            <Row className="h-85px mt-[30px] mb-[30px] brand">
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand1} />
                 </Col>
-                <Col className="h-full" xs={2}>
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand2} />
                 </Col>
-                <Col className="h-full" xs={2}>
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand3} />
                 </Col>
-                <Col className="h-full" xs={2}>
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand4} />
                 </Col>
-                <Col className="h-full" xs={2}>
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand5} />
                 </Col>
-                <Col className="h-full" xs={2}>
+                <Col className="h-full brand-items" lg={2} xs={4}>
                     <img className="h-full" src={Brand6} />
                 </Col>
             </Row>

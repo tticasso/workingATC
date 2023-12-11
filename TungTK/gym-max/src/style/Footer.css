@@ -1,0 +1,33 @@
+@media (min-width: 1024px) and (max-width: 1919px) {}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-header {
+        font-size: 12px;
+    }
+
+    .footer-contents {
+        font-size: 6px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .footer-header {
+        font-size: 5px;
+    }
+
+    .footer-contents {
+        font-size: 4px;
+    }
+    .footer-bla {
+        font-size: 6px;
+    }
+    .footer-logo {
+        height: 40%;
+        margin-top: 20px;
+    }
+
+    .footer-logo img {
+        width: 75px;
+        height: 20px;
+    }
+}

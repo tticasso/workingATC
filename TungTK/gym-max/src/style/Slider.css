@@ -1,19 +1,18 @@
 /* From uiverse.io by @Ali-Tahmazi99 */
 .buttonStyle {
     display: inline-block;
-    width: 150px;
+    width: 172px;
     height: 50px;
-    border-radius: 10px;
-    border: 1px solid #03045e;
+    border: 1px solid white;
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 1;
-    
-   }
-   
-   .buttonStyle::before,
-   .buttonStyle::after {
+
+}
+
+.buttonStyle::before,
+.buttonStyle::after {
     content: '';
     position: absolute;
     top: 0;
@@ -23,30 +22,121 @@
     transition: all 0.5s;
     overflow: hidden;
     z-index: -1;
-   }
-   
-   .buttonStyle::before {
+}
+
+.buttonStyle::before {
     left: -10px;
     background: #240046;
-   }
-   
-   .buttonStyle::after {
+}
+
+.buttonStyle::after {
     right: -10px;
     background: #5a189a;
-   }
-   
-   .buttonStyle:hover::before,
-   .buttonStyle:hover::after {
+}
+
+.buttonStyle:hover::before,
+.buttonStyle:hover::after {
     width: 58%;
-   }
-   
-   .buttonStyle:hover span {
+}
+
+.buttonStyle:hover span {
     color: #e0aaff;
     transition: 0.3s;
-   }
-   
-   .buttonStyle span {
-    color: #03045e;
+}
+
+.buttonStyle span {
+    color: white;
     font-size: 18px;
     transition: all 0.3s ease-in;
-   }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .slider-cont {
+        height: 600px;
+    }
+
+    .slider-cont-content {
+        bottom: 400px;
+    }
+
+    .slider-cont-content-title {
+        font-size: 36px;
+    }
+    .slider-cont-content-title-2 {
+        font-size: 20px;
+    }
+    .slider-cont-content-title-3 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .slider-cont {
+        height: 400px;
+    }
+
+    .slider-cont-content {
+        bottom: 300px;
+    }
+
+    .slider-cont-content-title {
+        font-size: 30px;
+    }
+    .slider-cont-content-title-2 {
+        font-size: 18px;
+    }
+    .slider-cont-content-title-3 {
+        font-size: 10px;
+    }
+    .buttonStyle {
+        width: 70px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttonStyle span {
+        color: white;
+        font-size: 10px;
+        transition: all 0.3s ease-in;
+    }
+    .buttonStyleCont {
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .slider-cont {
+        height: 200px;
+    }
+    .slider-cont-content {
+        bottom: 150px;
+    }
+
+    .slider-cont-content-title {
+        font-size:12px;
+    }
+    .slider-cont-content-title-2 {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .slider-cont-content-title-3 {
+        margin-top: 10px;
+        font-size: 6px;
+    }
+    .buttonStyle {
+        width: 50px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .buttonStyle span {
+        color: white;
+        font-size: 7px;
+        transition: all 0.3s ease-in;
+    }
+    .buttonStyleCont {
+        margin-top: 2px;
+    }
+}
