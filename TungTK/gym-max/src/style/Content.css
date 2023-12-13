@@ -2,6 +2,12 @@
     .content-header {
         height: 400px;
     }
+    .productList {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 16px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -55,5 +61,20 @@
 
     .end {
         font-size: 20px;
+    }
+
+    .menuContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .productList {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 16px;
     }
 }

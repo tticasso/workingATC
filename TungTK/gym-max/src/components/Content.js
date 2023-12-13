@@ -120,8 +120,8 @@ export default function Content() {
                         </div>
                     </Col>
                 </Row>
-                <Row className="mt-[70px] relative">
-                    <Col className="flex" xs={12}>
+                <Row className="mt-[70px] relative menuContainer">
+                    <Col className="flex menuContainer" xs={12}>
                         <p
                             className={`content-items text-[18px] font-extrabold mr-[20px] ml-[20px] mb-[10px] relative ${selectedMenuItem === 0 ? 'text-red-500' : ''
                                 }`}
@@ -155,13 +155,13 @@ export default function Content() {
                     </Col>
                 </Row>
 
-                <Row className="mt-[30px]">
+                <Row className="mt-[30px] mr-0 ml-0 w-full flex justify-center productList">
                     <Product image={Item1} name="Body Champ Cardio" price="$342.00" />
                     <Product image={Item2} name="Body Solid GCEC340" price="$214.00" />
                     <Product image={Item3} name="Bowflex BXE116 Elliptical" price="$421.00" />
                     <Product image={Item4} name="ETHOS GHD" price="$152.00" />
                 </Row>
-                <Row className="mt-[30px]">
+                <Row className="mt-[30px] mr-0 ml-0  w-full flex justify-center productList">
                     <Product image={Item5} name="AFG Pro 7.2AI Incline" price="$252.00" />
                     <Product image={Item6} name="Weight Bench" price="$412.00" />
                     <Product image={Item7} name="ProForm Hiit Trainer Lite 5.9" price="$300.00" />

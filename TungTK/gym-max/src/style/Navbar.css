@@ -1,71 +1,66 @@
 @media (min-width: 1024px) and (max-width: 1919px) {
-    .nav-cont {
+    .navContainer {
         width: 100%;
         height: 60px;
     }
-
-    .nav-row {
-        justify-content: space-between;
+    .navLogo {
+        height: 60%;
     }
+
+    .navLogo img {
+        height: 100%;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .nav-cont {
+    .navContainer {
         width: 100%;
         height: 50px;
     }
-
-    .nav-row {
-        justify-content: space-between;
+    .navLogo {
+        height: 60%;
     }
 
-    .logo-col img {
-        position: relative;
-        right: 60px;
+    .navLogo img {
+        height: 100%;
     }
 
-    .list-menu {
-        width: 400px;
-    }
-
-    .list-menu-2 {
-        position: relative;
-        left: 3px;
+    .menuList {
+        font-size: 10px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .nav-cont {
+    .navContainer {
         width: 100%;
         height: 30px;
     }
 
-    .nav-row {
-        display: flex;
+    .navContainer div {
         justify-content: space-between;
     }
 
-    .logo-col {
-        width: 120px;
+    .navLogo {
+        height: 60%;
+        margin-left: 20px;
     }
 
-    .logo-col img {
-        position: relative;
-        top: -10px;
-        right: 40px;
+    .navLogo img {
+        height: 100%;
     }
 
-    .list-menu {
+    .navList {
         display: none;
     }
 
-    .list-menu-2 {
+    .navIcon {
         display: none;
     }
 
-    .responsiveNav {
+    .menu {
         display: block;
-        position: relative;
-        left: 111px;
+        margin-right: 20px;
     }
+
 }
