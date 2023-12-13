@@ -6,6 +6,7 @@ import Slider from './components/Slider';
 import Brands from './components/Brands';
 import Copyright from './components/Copyright';
 import FooterEnd from './components/FooterEnd';
+import ResponsiveNavbar from './components/ResponsiveNavbar';
 
 function App() {
   return (
