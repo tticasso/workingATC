@@ -7,7 +7,7 @@ import ListWeek from './ListWeek';
 import React from 'react';
 import ListMonth from './ListMonth';
 
-export default function TrendingList() {
+export default function TabsTest() {
     const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
     const CustomTabList = ({ children }) => (
@@ -34,7 +34,7 @@ export default function TrendingList() {
     return (
         <div className="w-full h-[456px] flex justify-center mt-[0px] bg-black">
             <div className="w-[1216px] h-[456px]">
-                <p className="text-[16px] font-normal text-[#02ff28] relative top-[25px]">Trending Movie's & TV Shows</p>
+                <p className="text-[16px] font-normal text-[#02ff28] relative top-[25px]">Popular Movie's & Tv Shows</p>
                 <Tabs selectedIndex={selectedTabIndex} onSelect={index => setSelectedTabIndex(index)}>
                     <CustomTabList>
                         <Tab>Day</Tab>
@@ -57,11 +57,7 @@ export default function TrendingList() {
                         </div>
                     </TabPanel>
                     <TabPanel>
-                    <div className='w-full flex justify-center'>
-                            <div className='w-[1216px]'>
-                                <ListMonth />
-                            </div>
-                        </div>
+                        <ListMonth />
                     </TabPanel>
                 </Tabs>
             </div>

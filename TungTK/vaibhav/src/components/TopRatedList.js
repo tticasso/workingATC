@@ -1,45 +1,62 @@
-import React, { useRef, useState } from 'react';
-import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import '../style/Swiper.css'
-import FilmCont from './FilmCont';
+import { useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import ListFilm from './ListFilm';
+import ListDay from './ListDay';
+import ListWeek from './ListWeek';
+import React from 'react';
+import ListMonth from './ListMonth';
 
-export default function TopRatedList() {
+export default function TabsTest() {
+    const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+
+    const CustomTabList = ({ children }) => (
+        <TabList className='border-none relative left-[1015px] w-[200px] rounded-[20px] bg-white p-[0px] flex justify-center items-center'>
+            {React.Children.map(children, (child, index) => (
+                React.cloneElement(child, {
+                    style: {
+                        textDecoration: 'none',
+                        height: '100%',
+                        border: 'none',
+                        width: '100px',
+                        bottom: '0',
+                        borderRadius: '20px',
+                        textAlign: 'center',
+                        background: index === selectedTabIndex ? 'linear-gradient(98.37deg, #001df8 .99%, #06c5ff 100%)' : 'initial',
+                        color: index === selectedTabIndex ? 'white' : 'black',
+                    },
+                    onClick: () => setSelectedTabIndex(index),
+                })
+            ))}
+        </TabList>
+    );
 
     return (
-        <div className="w-full h-[456px] flex justify-center mt-[40px]">
+        <div className="w-full h-[456px] flex justify-center mt-[30px] bg-black">
             <div className="w-[1216px] h-[456px]">
-                <div className="h-[30px] flex items-center justify-between">
-                    <p className="text-[16px] font-normal text-[#02ff28]">Top Rated Movie's & Tv Shows</p>
-                    <button className="w-[100px] h-full text-white bg-gradient-to-r from-blue-800 to-blue-500 rounded-[25px]">Movies</button>
-                </div>
-                <div className='h-[426px] pt-[20px]'>
-                    <Swiper
-                        slidesPerView={5}
-                        spaceBetween={30}
-                        modules={[Pagination]}
-                        className="mySwiper"
-                    >
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                        <SwiperSlide className='h-[426px]'><FilmCont rating={8} /></SwiperSlide>
-                    </Swiper>
-                </div>
+                <p className="text-[16px] font-normal text-[#02ff28] relative top-[25px]">Top Rated Movie's & Tv Shows</p>
+                <Tabs selectedIndex={selectedTabIndex} onSelect={index => setSelectedTabIndex(index)}>
+                    <CustomTabList>
+                        <Tab>Movies</Tab>
+                        <Tab>TV</Tab>
+                    </CustomTabList>
 
+                    <TabPanel>
+                        <div className='w-full flex justify-center'>
+                            <div className='w-[1216px]'>
+                                <ListWeek/>
+                            </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <div className='w-full flex justify-center'>
+                            <div className='w-[1216px]'>
+                            <ListMonth />
+                            </div>
+                        </div>
+                    </TabPanel>
+                </Tabs>
             </div>
         </div>
-
     );
 }

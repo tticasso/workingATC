@@ -1,0 +1,35 @@
+/* styles.css */
+
+.tab-buttons {
+    display: flex;
+    height: 35px;
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    z-index: 1;
+    transition: color ease 1s;
+    /* Tăng thời gian chuyển đổi lên 0.5s */
+}
+
+button.active {
+    background: linear-gradient(98.37deg, #001df8 .99%, #06c5ff 100%);
+    transition: color ease 1s;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.tab-content {
+    width: 100%;
+}
