@@ -5,10 +5,13 @@ import HeroSlider from './components/HeroSlider';
 import ListFilm from './components/ListFilm';
 import Navbar from './components/Navbar';
 import PopularList from './components/PopularList';
+import Tabs from './components/Tabs';
+import TabsTest from './components/TabsTest';
 import TopRatedList from './components/TopRatedList';
 import TrendingList from './components/TrendingList';
 
 function App() {
+  
   return (
     <div className='bg-black'>
       <HeroSlider />
@@ -19,6 +22,9 @@ function App() {
       <TopRatedList />
       <Footer />
     </div>
+
+    
+    
   );
 }
 
